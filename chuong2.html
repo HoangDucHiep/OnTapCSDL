@@ -1,0 +1,88 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="ch-ng-2-m-h-nh-er">Chương 2: Mô hình ER</h1>
+<h2 id="c-b-n">Cơ bản</h2>
+<ul>
+<li>Mô hình ER:   <ul>
+<li>Là một công cụ thiết kế   </li>
+<li>Là đồ thị biểu diễn hệ thống CSDL   </li>
+<li>Cung cấp một mô hình dữ liệu cấp cao ở mức khái niệm   </li>
+<li>Trừu tượng hóa cấu trúc của CSDL. Độc lập với DBMS và phần cứng   </li>
+</ul>
+</li>
+</ul>
+<h2 id="th-c-th-entity">Thực thể - Entity</h2>
+<ul>
+<li>Thực thể là bất kỳ đối tượng nào trong hệ thống mà chúng ta muốn mô hình hóa và cất giữ thông tin   </li>
+<li>Có 2 kiểu thực thể:    <ul>
+<li>Thực thể mạnh: Thực thể mà sự tồn tại không phụ thuộc vào thực thể khác   </li>
+<li>Thực thể yếu: X là thực thể yếu nếu sự tồn tại của X phụ thuộc vào sự tồn tại của thực thể Y.<br><img src="files\image_8.png" alt="image.png">    </li>
+</ul>
+</li>
+</ul>
+<h2 id="thu-c-t-nh-attribute">Thuộc tính - Attribute</h2>
+<ul>
+<li>Là tính chất, đặc điểm để mô tả thực thể   </li>
+<li>Mỗi thuộc tính của một thực thể xác định có giá trị cụ thể và nó là dữ liệu cần lưu trữ   </li>
+<li>Mỗi thuộc tính có một kiểu dữ liệu xác định   </li>
+</ul>
+<h3 id="c-c-lo-i-thu-c-t-nh">Các loại thuộc tính</h3>
+<blockquote>
+<p>Thuộc tính đơn - Thuộc tính gộp   </p>
+</blockquote>
+<ul>
+<li><strong><em>Thuộc tính đơn</em></strong>: Giá trị không thể chia nhỏ hơn. VD: cân nặng, giới tính,…   </li>
+<li><strong><em>Thuộc tính gộp (phức hợp)</em></strong>: giá trị có thể chia nhỏ hơn. VD: Họ tên - Họ, tên, họ đệm; …    </li>
+</ul>
+<blockquote>
+<p>Thuộc tính đơn - đa trị   </p>
+</blockquote>
+<ul>
+<li>Mã sinh viên: chỉ 1 mã duy nhất   </li>
+<li>Sở thích: Có thể có nhiều sở thích   </li>
+</ul>
+<blockquote>
+<p>Thuộc tính cơ sở - dẫn xuất   </p>
+</blockquote>
+<ul>
+<li>Ngày sinh: cơ sở   </li>
+<li>Tuổi: dẫn xuất - từ ngày sinh<br><img src="files\image_1n.png" alt="image.png">    </li>
+</ul>
+<h3 id="thu-c-t-nh-kh-a">Thuộc tính Khóa</h3>
+<ul>
+<li>Dùng để phân biệt giữa các thực thể cùng kiểu   </li>
+<li>Gồm một khoặc nhiều thuộc tính   </li>
+<li>Một kiểu thực thể có thể có một hoặc nhiều khóa ứng viên, khóa ứng viên được sử dụng gọi là khóa chính (Primary Key)<br><img src="files\image_v.png" alt="image.png">    </li>
+</ul>
+<h2 id="li-n-k-t-relationships">Liên kết - Relationships</h2>
+<ul>
+<li>Là sự kết hợp của 2 hay nhiều thực thể phân biệt theo một ý nghĩa nào đó<br>  <img src="files\image_m.png" alt="image.png">    </li>
+</ul>
+<h3 id="b-c-c-a-li-n-k-t">Bậc của liên kết</h3>
+<ul>
+<li>Bậc của liên kết là số kiểu thực thể tham gia vào liên kết   <ul>
+<li>Nhị phân: Chỉ có 2 kiểu thực thể liên kết với nhau<br>  <img src="files\image_4.png" alt="image.png">    </li>
+<li>Tam phân: có 3 kiểu thực thể liên kết với nhau<br>  <img src="files\image_r.png" alt="image.png">    </li>
+<li>Đơn phân - Đệ quy: Kiểu thực thể liên kết với chính nó<br>  <img src="files\image_i.png" alt="image.png">    </li>
+</ul>
+</li>
+</ul>
+<h3 id="c-c-ki-u-li-n-k-t-">Các kiểu liên kết:</h3>
+<p><img src="files\image_14.png" alt="image.png">    </p>
+<ul>
+<li>1 - 1<br>  <img src="files\image_c.png" alt="image.png">    </li>
+<li>1 - N<br>  <img src="files\image_y.png" alt="image.png">    </li>
+<li>N - N<br>  <img src="files\image_f.png" alt="image.png">    </li>
+</ul>
+<h2 id="c-c-b-c-x-y-d-ng-m-h-nh-er">Các bước xây dựng mô hình ER</h2>
+<ol>
+<li>Xác định các thực thể   </li>
+<li>Loại bỏ các thực thể trùng lặp   </li>
+<li>Liệt kê các thuộc tính của mỗi thực thể   </li>
+<li>Tạo khóa chính PK   </li>
+<li>Định nghĩa liên kết   </li>
+<li>Mô tả các kiểu liên kết   </li>
+<li>Loại bỏ các liên kết dư thừa (liên kết vòng)   </li>
+</ol>
+</body></html>

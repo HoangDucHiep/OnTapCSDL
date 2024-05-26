@@ -1,0 +1,62 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="ch-ng-1-c-b-n">Chương 1: Cơ bản</h1>
+<h2 id="kh-i-ni-m-c-s-d-li-u">Khái niệm cơ sở dữ liệu</h2>
+<ul>
+<li>CSDL là một hệ thống các thông tin có cấu trúc được lưu trữ trên các thiết bị lưu trữ thông tin thứ cấp (như băng từ, đĩa từ …) để có thể thỏa mãn yêu cầu khai thác thông tin đồng thời của nhiều sử dụng hay nhiều chương trình ứng dụng với nhiều mục đích khác nhau.<br>  <img src="files\image.png" alt="image.png">    </li>
+</ul>
+<h2 id="-u-i-m-h-n-ch-csdl">Ưu điểm, hạn chế CSDL</h2>
+<h3 id="-u-i-m">Ưu điểm</h3>
+<ul>
+<li>Giảm sự trùng lặp thông tin xuống mức thấp nhất do đó đảm bảo được tính nhất quán và toàn vẹn dữ liệu   </li>
+<li>Đảm bảo được dữ liệu có thể được truy xuất theo nhiều cách khác nhau   </li>
+<li>Khả năng chia sẻ thông tin cho nhiều người sử dụng và nhiều ứng dụng khác nhau.   </li>
+</ul>
+<h3 id="h-n-ch-">Hạn chế</h3>
+<ul>
+<li>Tính bảo mật và quyền khai thác thông tin của người sử dụng   </li>
+<li>Tranh chấp dữ liệu   </li>
+<li>Đảm bảo dữ liệu khi có sự cố   </li>
+</ul>
+<h2 id="c-c-c-t-nh-c-a-m-t-hqt-csdl">Các đặc tính của một HQT CSDL</h2>
+<ul>
+<li>Khả năng lưu trữ dữ liệu lâu dài   </li>
+<li>Truy nhập số lượng lớn thông tin một  cách hiệu quả   </li>
+<li>Ngôn ngữ cấp cao để định nghĩa và thao tác dữ liệu   </li>
+<li>Đồng bộ các truy nhập cạnh tranh   </li>
+<li>Kiểm tra tính đúng đắn của dữ liệu và thẩm quyền truy cập   </li>
+<li>Phục hồi   </li>
+</ul>
+<h2 id="ki-n-tr-c-t-ng-qu-t-c-a-m-t-csdl">Kiến trúc tổng quát của một CSDL</h2>
+<p><img src="files\image_a.png" alt="image.png">    </p>
+<ul>
+<li><strong><em>Mức trong (vật lý):</em></strong> mức lưu trữ CSDL, cần giải quyết các vấn đề là: dữ liệu là gì, được lưu trữ thế nào, ở đâu, …   </li>
+<li><strong><em>Mức khái niệm (logic):</em> </strong>giảii quyết vấn đề cần lưu trữ bao nhiêu loại dữ liệu, mối quan hệ giữa chúng,…   </li>
+<li><strong><em>Mức Ngoài (Khung nhìn)</em></strong>: là mức người dùng và chương trình sử dụng   </li>
+</ul>
+<h2 id="m-t-s-m-h-nh-d-li-u">Một số mô hình dữ liệu</h2>
+<p>Mô hình dữ liệu là sự trừu tượng hóa môi trường thực, nó là sự biểu diễn dữ liệu ở mức quan niệm.   </p>
+<h3 id="m-h-nh-m-ng">Mô hình mạng</h3>
+<ul>
+<li>Mô hình được biểu diễn bởi một đồ thị có hướng.<br>  <img src="files\image_z.png" alt="image.png">    </li>
+<li>Mỗi đỉnh là một record   </li>
+</ul>
+<h3 id="m-h-nh-ph-n-c-p">Mô hình phân cấp</h3>
+<ul>
+<li>Mô hình là một cây, trong đó mỗi nút của cây biểu diễn một loại mẫu tin.   </li>
+<li>Giữa 2 loại mẫu tin chỉ tồn tại một mối quan hệ duy nhất. Quan hệ giữa nút cấp trên và nút con là 1-n hoặc 1-1.<br>  <img src="files\image_1.png" alt="image.png">    </li>
+</ul>
+<h3 id="m-h-nh-er">Mô hình ER</h3>
+<ul>
+<li>Mô hình gồm: thực thể, thuộc tính thực thể, quan hệ<br>  <img src="files\image_u.png" alt="image.png">    </li>
+</ul>
+<h3 id="m-h-nh-quan-h-rm-">Mô hình quan hệ (RM)</h3>
+<ul>
+<li>Nền tảng cơ bản của nó là khái niệm lý thuyết tập hợp trên các quan hệ, tức là tập của các bộ giá trị (Value Tuples). Trong mô hình dữ liệu này những khái niệm sẽ được sử dụng bao gồm thuộc tính (Attribute), quan hệ (Relation), lược đồ quan hệ (Relation Schema), bộ (Tuple), khóa (Key).<br>  <img src="files\image_0.png" alt="image.png">    </li>
+</ul>
+<h3 id="m-h-nh-h-ng-i-t-ng">Mô hình hướng đối tượng</h3>
+<ul>
+<li>Đây là loại mô hình dựa trên cách tiếp cận hướng đối tượng đã quen thuộc trong các phương pháp lập trình hướng đối tượng, nó sử dụng các khái niệm như lớp (class), sự kế thừa (inheritance), kế thừa bội(multi-inheritance).   </li>
+</ul>
+</body></html>

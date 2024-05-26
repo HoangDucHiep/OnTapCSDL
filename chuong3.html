@@ -1,0 +1,93 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="ch-ng-3-m-h-nh-rm">Chương 3: Mô hình RM</h1>
+<h2 id="quan-h-relation">Quan hệ - Relation</h2>
+<ul>
+<li>Dữ liệu trong CSDL được tổ chức thành các bảng 2 chiều, mỗi bảng được gọi là một quan hệ<br>  <img src="files\image_9.png" alt="image.png">    </li>
+</ul>
+<h2 id="thu-c-t-nh-attribute">Thuộc tính - Attribute</h2>
+<ul>
+<li>Là các cột trong bảng quan hệ   </li>
+<li>Mỗi thuộc tính có một kiểu dữ liệu<br>  <img src="files\image_g.png" alt="image.png">    </li>
+</ul>
+<h2 id="mi-n-domain">Miền - Domain</h2>
+<ul>
+<li>Miền giá trị của thuộc tính<br>  <img src="files\image_1g.png" alt="image.png">    </li>
+</ul>
+<h2 id="b-d-li-u-tuples">Bộ dữ liệu - Tuples</h2>
+<ul>
+<li>Là các dòng dữ liệu không kể dòng tên các thuộc tính   </li>
+<li>Mỗi bộ dữ liệu chứa các giá trị cụ thể của các thuộc tính<br>  <img src="files\image_n.png" alt="image.png">    </li>
+</ul>
+<h2 id="l-c-quan-h-relation-schema">Lược đồ quan hệ - Relation Schema</h2>
+<p><img src="files\image_t.png" alt="image.png">    </p>
+<h2 id="c-c-c-tr-ng-c-a-quan-h-">Các đặc trưng của quan hệ</h2>
+<ul>
+<li>Trong một quan hệ không có các bộ trùng nhau   </li>
+<li>Thứ tự các bộ trong quan hệ là không quan trọng   </li>
+<li>Thứ tự của các giá trị trong bộ là quan trọng   </li>
+<li>Giá trị rỗng (Null) trong bộ dùng để biểu diễn các giá trị chưa xác định   </li>
+</ul>
+<h2 id="c-c-r-ng-bu-c-c-a-m-h-nh-quan-h-">Các ràng buộc của mô hình quan hệ</h2>
+<ul>
+<li><strong><em>Ràng buộc toàn vẹn:</em></strong> Là các điều kiện mà mọi trạng thái quan hệ đều phải tuân theo   </li>
+</ul>
+<h3 id="r-ng-bu-c-v-kh-a">Ràng buộc về khóa</h3>
+<ul>
+<li><strong><em>Siêu khóa</em></strong> xác định ràng buộc về tính duy nhất của các bộ trong quan hệ.   </li>
+<li>Mọi lược đồ đều có ít nhất một siêu khóa   </li>
+<li><strong><em>Khóa: </em></strong>   <ul>
+<li>Tập thuộc tính K ≠ ∅ của R được gọi là khóa của R nếu thỏa mãn đồng thời 2 điều kiện sau:   <ul>
+<li>K là siêu khóa của R   </li>
+<li>∀ K&#39; ⊂ L thì K&#39; không là siêu khóa của R   </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nhận xét:   <ul>
+<li>Khóa là siêu khóa nhỏ nhất   </li>
+<li>Một lược đồ có thể có nhiều khóa   </li>
+<li>Các khóa được gọi là khóa ứng viên   </li>
+<li>Có một khóa được chọn làm khóa chính   </li>
+<li>Các thuộc tính khóa được gạch dưới<br><img src="files\image_k.png" alt="image.png">    </li>
+</ul>
+</li>
+</ul>
+<h3 id="csdl-v-l-c-csdl-quan-h-">CSDL và lược đồ CSDL quan hệ</h3>
+<ul>
+<li>Lược đồ CSDL là tập hợp các lược đồ quan hệ và tập hợp các RBTV   </li>
+<li>Trạng thái CSDL quan hệ của S:    <ul>
+<li>là tập hợp các trạng thái quan hệ thỏa mãn điều kiện RBTV   </li>
+<li>Trạng thái là hợp lệ nếu nó thỏa mãn mọi RBTV   </li>
+</ul>
+</li>
+<li>CSDL quan hệ:   <ul>
+<li>Lược đồ CSDL quan hệ S + Trạng thái CSDL của S<br><img src="files\image_6.png" alt="image.png">    </li>
+</ul>
+</li>
+</ul>
+<h3 id="rbtv-th-c-th-v-rbtv-tham-chi-u">RBTV thực thể và RBTV tham chiếu</h3>
+<ul>
+<li><strong><em>RBTV thực thể:</em></strong>   <ul>
+<li>Các giá trị của khóa không được nhận giá trị rỗng   </li>
+<li>Xác định trên từng quan hệ   </li>
+</ul>
+</li>
+<li><strong><em>RBTV  tham chiếu:</em></strong>   <ul>
+<li>Một bộ trong quan hệ R tham chiếu đến một bộ trong quan hệ S thì bộ trong quan hệ S phải tồn tại trước   </li>
+<li>Xác định giữa 2 quan hệ   </li>
+<li>Khóa ngoại: FK trong R được gọi là khóa ngoại nếu nó là khóa chính trong S   </li>
+</ul>
+</li>
+<li>Nhận xét:   <ul>
+<li>Có nhiều RBTV tham chiếu trong một CSDL   </li>
+<li>Trong một lược đồ một thuộc tính vừa có thể tham gia vào khóa chính vừa tham gia vào khóa ngoại   </li>
+<li>Có thể có nhiều khóa ngoại tham chiếu đến cùng một khóa chính   </li>
+<li>Trong lược đồ CSDL, RBTV tham chiếu được biểu diễn bằng đường cung đi từ khóa ngoại đến khóa chính được tham chiếu   </li>
+</ul>
+</li>
+</ul>
+<h2 id="chuy-n-i-rm-sang-er">Chuyển đổi RM sang ER</h2>
+<p>…   </p>
+</body></html>
